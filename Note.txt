@@ -1,0 +1,42 @@
+All METHODS
+WorkoutClass:
+get_name
+access _name
+get_required_certificates
+access _required_certificates
+
+Instructor
+get_id
+access _id
+add_certificate
+add the 'certificate' (str) into _certificate (list) and return T iff added a new certificate
+get_num_certificates
+total # of certificates in _certificates
+can_teach
+return true iff instructor has the required certificates to teach 'workout_class' (WorkoutClass)
+
+
+ALL ATTRIBUTES
+WorkoutClass:
+_name: str
+name of the workout
+_required_certificates: List[str]
+the certificate needed to teach this workout
+
+Instructor:
+name: str
+instructor name
+_id: int
+instructor id num
+_certificates: List[str]
+cerficates the instructor have
+
+Gym
+_instructor: Dict[int, Instructor]
+(_id) is key, (name, in Instructor) is value
+_workouts: Dict[str, WorkoutClass]
+(_name) is key, (WorkoutClass) is value
+_rooms: Dict[str, int]
+room name is key, capacity is value
+_schedule
+date is key, classes available 
